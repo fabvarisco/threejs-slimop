@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slimop</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game-canvas" aria-label="Slimop"></canvas>
+
+      <div class="hud top-left">
+        <div class="stat">
+          <span>Fase</span>
+          <strong id="phase-value">1</strong>
+        </div>
+        <div class="stat">
+          <span>Tempo</span>
+          <strong id="time-value">00:00</strong>
+        </div>
+        <div class="stat">
+          <span>Massa</span>
+          <strong id="mass-value">0</strong>
+        </div>
+        <div class="stat wide">
+          <span>Cidade</span>
+          <div class="meter" aria-hidden="true"><i id="city-meter"></i></div>
+          <strong id="city-value">100%</strong>
+        </div>
+      </div>
+
+      <aside class="leaderboard" aria-label="Placar">
+        <h1>Slimop</h1>
+        <div id="rank-list"></div>
+      </aside>
+
+      <div class="center-state" id="center-state">
+        <div class="state-panel">
+          <h2 id="state-title">Carregando</h2>
+          <p id="state-detail">Preparando cidade</p>
+          <button id="state-action" type="button">Jogar</button>
+        </div>
+      </div>
+
+      <div class="touch-stick" id="touch-stick" aria-hidden="true">
+        <i id="touch-knob"></i>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
